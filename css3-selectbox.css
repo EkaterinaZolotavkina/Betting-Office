@@ -1,0 +1,87 @@
+/*
+ * @CSS3 Selectbox
+ * @author Martin Ivanov
+ * @website http://wemakesitesnet
+ * @blog http://acidmartin.wordpress.com
+ * @twitter https://twitter.com/#!/wemakesitesnet
+ **/
+
+:root .css3-selectbox,
+:root .css3-selectbox select,
+:root .css3-selectbox::after,
+:root .css3-selectbox::before
+{
+    display: inline-block;
+    vertical-align: top;
+    height: 18px;
+}
+
+:root .css3-selectbox::after,
+:root .css3-selectbox::before
+{
+    content: "";
+    -moz-pointer-events: none;
+    -webkit-pointer-events: none;
+    pointer-events: none;
+}
+
+:root .css3-selectbox,
+:root .css3-selectbox::after
+{
+    background: #757575;
+    background: -moz-linear-gradient(#757575, #121212);
+    background: -webkit-linear-gradient(#757575, #121212);
+    background: -ms-linear-gradient(#757575, #121212);
+    background: -o-linear-gradient(#757575, #121212);
+    background: linear-gradient(#757575, #121212);
+}
+
+:root .css3-selectbox select
+{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    font: normal 14px "Segoe UI", Arial, Sans-serif;
+    color: #fff;
+}
+
+:root .css3-selectbox option
+{
+    background: #835353;
+}
+
+:root .css3-selectbox
+{
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 3px;
+    position: relative;
+    box-shadow: 0 0 0 1px #6a6a6a, 0 0 0 1px #919191 inset;
+}
+
+:root .css3-selectbox::before
+{
+    position: absolute;
+    z-index: 1;
+    top: 8px;
+    right: 4px;
+    width: 0;
+    height: 0;
+    border: solid 4px transparent;
+    border-top-color: rgba(255, 255, 255, .6);
+}
+
+:root .css3-selectbox::after
+{
+    position: relative;
+    left: 1px;
+    width: 16px;
+    margin: 0 0 0 -17px;
+    box-shadow: -1px 0 0 1px #919191 inset;
+}
+
+:root .css3-selectbox:hover::before
+{
+    border-top-color: #fff;
+}
